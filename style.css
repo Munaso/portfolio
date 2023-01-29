@@ -9,7 +9,7 @@
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
-  --color-green: #76c893;
+  --color-green: #77C347;
   --color-yellow: #d9ed92;
   --color-center-blue: #34a0a4;
   --color-black: #000000;
@@ -52,8 +52,18 @@ a{
 }
 
 ul{
-  list-style: none;
   padding-left: 0;
+}
+
+li{
+  list-style: none;
+}
+
+button{
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 /* Typography */
 
@@ -85,12 +95,15 @@ p {
   margin: 4px 0;
 }
 
+.navbar-home{
+  background: url('imgs/home-background.png') center/cover no-repeat;
+}
+
 /* Navbar */
 #navbar{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-blue);
   padding: 16px
 
 }
@@ -125,4 +138,29 @@ p {
 
 .navbar__menu__item:hover{
   background-color: var(--color-center-blue);
+}
+
+/* Home */
+#home{
+  padding:40px;
+  text-align: center;
+}
+
+.home__avatar{
+  border-radius: 5%;
+  border: 2px solid var(--color-light-white)
+}
+
+.home__title,
+.home__description{
+  color: var(--color-white)
+}
+
+.home__contact{
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-white)
 }
