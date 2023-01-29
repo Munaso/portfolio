@@ -54,7 +54,7 @@
 </section>
 
   <!-- About -->
-  <section id="about" class="section">
+  <section id="about" class="section section__container">
     <h1>About Me</h1>
     <p>A frontend developer. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam voluptates ex asperiores, cumque facere laboriosam illo sequi praesentium obcaecati optio corporis velit ullam nemo pariatur error facilis nostrum porro ab.</p>
     <div class="about__majors">
@@ -90,83 +90,85 @@
       <div class="job">
         <img src="imgs/sparta_logo.png" alt="Sparta" class="job__logo">
         <div class="job__description">
-          <p class="job__name">Mini Tutor</p>  
-          <p class="job__period">2022.7.(1개월)</p>
+          <p class="job__name">미니튜터, 수강생의 코드질문 질의응답 역할</p>  
+          <p class="job__period">2022. 7. (1개월)</p>
         </div>        
       </div>
     </div>
   </section>
   <!-- Skills -->
-  <section id="skills">
-    <h1>Skills</h1>
-    <h2>Skills & Attributes</h2>
-    <p>
-      코드를 접하고 이해하고 사용하는 데에 익숙합니다. 나의 프로젝트를 챙긴 후 다른 개발자들을 배려합니다. 
-      프로젝트 시간관리, 개인적 에너지관리를 잘합니다.
-    </p>
-    <div class="skillset">
-      <div class="skillset__left">
-        <h3 class="skillset__title">Skills</h3>
-        <div class="skill">
-          <div class="skill__description">
-            <span>HTML</span>
-            <span>60%</span>
+  <section id="skills" class="section">
+    <div class="section__container">
+      <h1>Skills</h1>
+      <h2>Skills & Attributes</h2>
+      <p>
+        코드를 접하고 이해하고 사용하는 데에 익숙합니다. 나의 프로젝트를 챙긴 후 다른 개발자들을 배려합니다. 
+        프로젝트 시간관리, 개인적 에너지관리를 잘합니다. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum magni, ea accusantium odio nostrum unde dolorem facere voluptate deserunt ratione sunt eaque veniam dignissimos eos nesciunt repellendus molestias cumque eius!
+      </p>
+      <div class="skillset">
+        <div class="skillset__left">
+          <h3 class="skillset__title">Skills</h3>
+          <div class="skill">
+            <div class="skill__description">
+              <span>HTML</span>
+              <span>70%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value" style="width: 70%"></div>
+            </div>
           </div>
-          <div class="skill__bar">
-            <div class="skill__value"></div>
+          <div class="skill">
+            <div class="skill__description">
+              <span>CSS</span>
+              <span>70%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value" style="width: 70%"></div>
+            </div>
           </div>
-        </div>
-        <div class="skill">
-          <div class="skill__description">
-            <span>CSS</span>
-            <span>60%</span>
+          <div class="skill">
+            <div class="skill__description">
+              <span>JAVASCRIPT</span>
+              <span>60%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value" style="width: 60%"></div>
+            </div>
           </div>
-          <div class="skill__bar">
-            <div class="skill__value"></div>
+          <div class="skill">
+            <div class="skill__description">
+              <span>REACT NATIVE</span>
+              <span>60%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value" style="width: 60%"></div>
+            </div>
           </div>
-        </div>
-        <div class="skill">
-          <div class="skill__description">
-            <span>JAVASCRIPT</span>
-            <span>60%</span>
-          </div>
-          <div class="skill__bar">
-            <div class="skill__value"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <div class="skill__description">
-            <span>REACT NATIVE</span>
-            <span>60%</span>
-          </div>
-          <div class="skill__bar">
-            <div class="skill__value"></div>
-          </div>
-        </div>
 
-      </div>
-      <div class="skillset__right">
-        <div class="tools">
-          <h3 class="skillset__title">Tools</h3>
-          <ul class="tools__list">
-            <li><span>Visual Studio Code</span></li>
-            <li><span>Firebase</span></li>
-            <li><span>AWS</span></li>
-          </ul> 
         </div>
-        <div class="etc">
-          <h3 class="skillset__title">Etc</h3>
-          <ul class="etc__list">
-            <li><span>Git</span></li>
-            <li><span></span></li>
-            <li><span></span></li>
-          </ul>
+        <div class="skillset__right">
+          <div class="tools">
+            <h3 class="skillset__title">Tools</h3>
+            <ul class="tools__list">
+              <li><span>Visual Studio Code</span></li>
+              <li><span>Firebase</span></li>
+              <li><span>AWS</span></li>
+            </ul> 
+          </div>
+          <div class="etc">
+            <h3 class="skillset__title">Etc</h3>
+            <ul class="etc__list">
+              <li><span>Git</span></li>
+              <li><span></span></li>
+              <li><span></span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
   <!-- Work -->
-  <section id="work">
+  <section id="work" class="section">
     <h1>My work</h1>
     <h3>Projects</h3>
     <div class="work__categories">
@@ -226,7 +228,7 @@
     </div>
   </section>
   <!-- Testimonials -->
-  <section id="testimonials">
+  <section id="testimonials" class="section">
     <h1>Testimonials</h1>
     <h3>See what they say about me</h3>
     <div class="testimonials">
@@ -247,7 +249,7 @@
     </div>
   </section>
   <!-- Contact -->
-  <section id="contact">
+  <section id="contact" class="section">
     <h1 class="contact__title">Contact me</h1>
     <h2 class="contact__email">coder.munaso@gmail.com</h2>
     <div class="contact__links">
