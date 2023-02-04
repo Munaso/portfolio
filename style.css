@@ -103,6 +103,8 @@ p {
 
 .navbar-home{
   background: url('imgs/home-background.png') center/cover no-repeat;
+
+
 }
 
 /* Navbar */
@@ -110,8 +112,10 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px
-
+  padding: 1px;
+  position: fixed;
+  width: 100%;
+  transition: all var(--animation-duration) ease-in;
 }
 
 .navbar__logo{
@@ -120,7 +124,6 @@ p {
   display: flex;
   align-items: center;
   margin-left: 5px;
-
   font-size: var(--font-medium);
   font-weight: var(--weight-bold);
 }
@@ -136,6 +139,7 @@ p {
   cursor: pointer;
   border-radius: var(--size-border-radius);
 }
+
 
 .navbar__menu__item.active{
   border: 1px solid var(--color-white);
@@ -158,6 +162,7 @@ p {
 /* Home */
 #home{
   padding:40px;
+  padding-top: 100px;
   text-align: center;
 }
 
