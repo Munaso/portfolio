@@ -408,3 +408,27 @@ p {
 .testimonial__speech-bubble a{
   color: var(--color-dark-blue);
 }
+
+/* Contact */
+
+#contact{
+  background-color: var(--color-emerald);
+}
+
+.contact__title,
+.contact__email{
+  color: var(--color-white)
+}
+
+.contact__title{
+  margin: 32px 0;
+}
+
+.contact__links{
+  font-size: var(--font-large);
+  margin: 24px;
+} 
+
+.contact__links i:hover{
+  transform: scale(1.1);
+}
