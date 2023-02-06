@@ -16,35 +16,46 @@ document.addEventListener("scroll",()=>{
   }
 })
 
+// Handle scrolling when tapping on the navbar menu
 
-// // Handle scrolling when tapping on the navbar menu
-// const navbarMenu = document.querySelector('.navbar__menu')
-// navbarMenu.addEventListener('click', (event)=>{
-//   const link = event.target.dataset.link;
-//   if(link == null){
-//     return;
-//   }
-//   console.log(event.target.dataset.link)
 
-//   const click_target = document.querySelector(link)
-//   click_target.scrollIntoView({behavior: "smooth"})
-// })
 
-// 어디서 본거
 const navbarMenu = document.querySelector('.navbar__menu')
 navbarMenu.addEventListener('click', (event)=>{
   const link = event.target.dataset.link;
   if(link == null){
     return;
   }
+  console.log(event.target.dataset.link)
+
   const scrollMove = document.querySelector(link);
-  const top = scrollMove.offsetTop - navbarHeight ;  
-  const left = scrollMove.offsetLeft;
+  const top = scrollMove.offsetTop - navbarHeight ;
+  window.scrollTo({
+    top: top, 
+    behavior: 'smooth'
+  });
+})
+
+// Handle click on "contact me" button on home
+
+function scrollIntoView(selector){
+  const scrollMove = document.querySelector(selector);
+  const top = scrollMove.offsetTop
   window.scrollTo({
     top:top,
     behavior: 'smooth'
   });
+}
+const contactMeBtn = document.querySelector('.home__contact')
+contactMeBtn.addEventListener('click', ()=>{
+  scrollIntoView('#contact');
 })
+
+
+
+
+
+
 
 
 
