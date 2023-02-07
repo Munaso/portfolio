@@ -6,7 +6,6 @@
 let navbar = document.getElementById('navbar');
 let navbarHeight = navbar.getBoundingClientRect().height;
 
-console.log(`navbarHeight: ${navbarHeight}`);
 document.addEventListener("scroll",()=>{
   if(window.scrollY > navbarHeight) {
     navbar.style.backgroundColor = '#92CD26'
@@ -55,12 +54,24 @@ contactMeBtn.addEventListener('click', ()=>{
 const home = document.querySelector('#home')
 const homeHeight = home.getBoundingClientRect().height
 document.addEventListener('scroll', ()=>{
-  home.style.opacity = 1.8 - window.scrollY / homeHeight
-  console.log(1 - window.scrollY / homeHeight);
+  home.style.opacity = 1 - window.scrollY / homeHeight
 })
 
+// show arrow-up button when scrolling down
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', ()=>{
+  if(window.scrollY > homeHeight / 2  ){
+    arrowUp.classList.add('visible');
+  } else {
+    arrowUp.classList.remove('visible');
+  }
+})
 
-
+// handle click on the "arrow up" button
+arrowUp.addEventListener('click', ()=>{
+  console.log('11')
+  scrollIntoView('#home');
+})
 
 
 
