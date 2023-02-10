@@ -87,6 +87,14 @@ work__categories.addEventListener('click', (event)=>{
   if(filter == null){
     return;
   }
+
+  // Remove selection from previous item and select a new one
+  const selected = document.querySelector('.category__btn.selected')
+  selected.classList.remove('selected')
+  event.target.classList.add('selected')
+
+  console.log(filter)
+
   projectContainer.classList.add('anim-out');  
   setTimeout(() => {
     projects.forEach(project => {
@@ -98,5 +106,8 @@ work__categories.addEventListener('click', (event)=>{
     })
     projectContainer.classList.remove('anim-out');
   }, "300")
+
+
+
 })
 
