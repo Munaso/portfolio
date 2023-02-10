@@ -335,6 +335,13 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: var(--animation-duration) ease-out;
+}
+
+.work__projects.anim-out{
+  opacity: 0;
+  transform: scale(0.9) translateY(15px); 
 }
 
 .project{
@@ -346,6 +353,10 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.project.hide{
+  display: none;
 }
 
 .project__img{

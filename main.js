@@ -26,8 +26,11 @@ navbarMenu.addEventListener('click', (event)=>{
     return;
   }
   console.log(event.target.dataset.link)
+  console.log(event)
+
 
   const scrollMove = document.querySelector(link);
+  console.log(scrollMove);
   const top = scrollMove.offsetTop - navbarHeight ;
   window.scrollTo({
     top: top, 
@@ -73,45 +76,27 @@ arrowUp.addEventListener('click', ()=>{
   scrollIntoView('#home');
 })
 
+// organize project list with buttons
+const work__categories = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project')
 
 
+work__categories.addEventListener('click', (event)=>{  
+  const filter = event.target.dataset.filter
+  if(filter == null){
+    return;
+  }
+  projectContainer.classList.add('anim-out');  
+  setTimeout(() => {
+    projects.forEach(project => {
+      if(filter === '*' || filter === project.dataset.type){
+        project.classList.remove('hide')
+      } else {
+        project.classList.add('hide')
+      }
+    })
+    projectContainer.classList.remove('anim-out');
+  }, "300")
+})
 
-
-
-
-
-
-
-// // locate with buttons
-
-// // Locate home
-// let location_home = document.querySelector("#navbar").offsetTop;
-
-// const btn_home = document.querySelector('#btn_home')
-// btn_home.addEventListener('click',function(){
-//   window.scrollTo({left:0, top:location_home})
-// })
-
-
-// // Locate About
-// let location_about = document.querySelector("#about");
-
-// const btn_about = document.querySelector('#btn_about')
-// btn_about.addEventListener('click',function(){
-//   location_about.scrollIntoView({block:"end"})
-// })
-
-
-
-// // Locate contact
-// let location_contact = document.querySelector("#contact").offsetTop;
-
-// const btn_contact = document.querySelector('#btn_contact')
-// btn_contact.addEventListener('click',function(){
-//   window.scrollTo({left:0, top:location_contact})
-// })
-
-// const btn_contact2 = document.querySelector('.home__contact')
-// btn_contact2.addEventListener('click',function(){
-//   window.scrollTo({left:0, top:location_contact})
-// })
