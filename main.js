@@ -2,41 +2,45 @@
 
 
 // Make navbar transparent when it is on the top
-
 let navbar = document.getElementById('navbar');
 let navbarHeight = navbar.getBoundingClientRect().height;
-
+console.log('navbarHeight:'+ navbarHeight)
 document.addEventListener("scroll",()=>{
   if(window.scrollY > navbarHeight) {
-    navbar.style.backgroundColor = '#92CD26'
+    navbar.classList.add('navbar--dark');
   }  
   else{
-    navbar.style.backgroundColor = '';
+    navbar.classList.remove('navbar--dark');
   }
 })
 
+
 // Handle scrolling when tapping on the navbar menu
-
-
-
 const navbarMenu = document.querySelector('.navbar__menu')
 navbarMenu.addEventListener('click', (event)=>{
   const link = event.target.dataset.link;
   if(link == null){
     return;
   }
-  console.log(event.target.dataset.link)
-  console.log(event)
+  navbarMenu.classList.remove('open');
 
 
   const scrollMove = document.querySelector(link);
-  console.log(scrollMove);
   const top = scrollMove.offsetTop - navbarHeight ;
   window.scrollTo({
     top: top, 
     behavior: 'smooth'
   });
 })
+
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+
+navbarToggleBtn.addEventListener('click', ()=> {
+  navbarMenu.classList.toggle('open');
+  navbar.classList.toggle('open');
+})
+
 
 // Handle click on "contact me" button on home
 
@@ -57,7 +61,7 @@ contactMeBtn.addEventListener('click', ()=>{
 const home = document.querySelector('#home')
 const homeHeight = home.getBoundingClientRect().height
 document.addEventListener('scroll', ()=>{
-  home.style.opacity = 1 - window.scrollY / homeHeight
+  home.style.opacity = 1.5 - window.scrollY / homeHeight
 })
 
 // show arrow-up button when scrolling down
@@ -74,6 +78,7 @@ document.addEventListener('scroll', ()=>{
 arrowUp.addEventListener('click', ()=>{
   console.log('11')
   scrollIntoView('#home');
+  
 })
 
 // organize project list with buttons
@@ -82,7 +87,7 @@ const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project')
 
 
-work__categories.addEventListener('click', (event)=>{  
+work__categories.addEventListener('click', (event)=>{
   const filter = event.target.dataset.filter
   if(filter == null){
     return;
